@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  iOS-Tower-Defence
+//  iOS-Tower-Defense
 //
-//  Created by block7 on 12/11/15.
-//  Copyright © 2015 block7. All rights reserved.
+//  Created by Noah Huppert on 12/12/15.
+//  Copyright © 2015 Noah Huppert. All rights reserved.
 //
 
 import UIKit

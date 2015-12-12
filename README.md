@@ -1,2 +1,118 @@
-# ios-tower-defense
+# iOS-Tower-Defense
 An IOS tower defense game
+
+# Planning
+## Story
+- Work at Area 51
+- Alien invasion
+- Must stop them from getting different weapons
+- As levels progress you get more weapons
+
+## Units
+*Planning layout:* Each unit category should have a `SCHEMA` and `CONTENT`
+category. The `SCHEMA` category is a definition of all the properties a unit
+can have using Extended Backus–Naur Form like syntax.
+
+- Turrets
+  - SCHEMA
+    - nickname: (* | ?)
+    - type: (kinetic | energy | poison | fire)
+    - damage: (low | medium | high )
+    - rate: (slow | medium | fast | continuous)
+    - aim-speed: (slow | medium | fast)
+    - projectile: (bullet | beam | missile | cloud)
+      - speed: (slow | medium | fast)
+      - tracking: (true | false)
+    - extra: (* | ?)
+  - CONTENT
+    - Turret
+      - nickname: Pea Shooter
+      - type: kinetic
+      - damage: low
+      - rate: fast
+      - aim-speed: fast
+      - projectile: bullet
+        - speed: fast
+        - tracking: false
+      - extra:
+    - Cannon
+      - nickname:
+      - type: kinetic
+      - damage: high
+      - rate: slow
+      - aim-speed: slow
+      - projectile: bullet
+        - speed: slow
+        - tracking: false
+      - extra:
+    - Flame thrower
+      - nickname:
+      - type: fire
+      - damage: medium
+      - rate: continuous
+      - aim-speed: slow
+      - projectile: cloud
+        - speed: NA
+        - tracking: NA
+      - extra:
+    - Poison gun
+      - nickname:
+      - type: poison
+      - damage: low
+      - rate: continuous
+      - aim-speed: slow
+      - projectile: cloud
+        - speed: NA
+        - tracking: NA
+      - extra: Damage lasts for 5 seconds
+    - Laser
+      - nickname: Beam gun
+      - type: energy
+      - damage: low
+      - rate: continuous
+      - aim-speed: fast
+      - projectile: beam
+        - speed: NA
+        - tracking: NA
+      - extra:
+    - Rail gun
+      - Nickname:
+      - type: energy
+      - damage: high
+      - rate: slow
+      - aim-speed: medium
+      - projectile: beam
+        - speed: NA
+        - tracking: NA
+      - extra:
+    - Rocket platform
+      - nickname:
+      - type: kinetic
+      - damage: high
+      - rate: medium
+      - aim-speed: medium
+      - projectile: missile
+        - speed: medium
+        - tracking: true
+      - extra: AOE after hit
+- Units
+  - Passive Towers
+    - Radar (Weakens targeted enemy)
+    - Vacuum (More money in area)
+  - Obstacles
+    - Land Mine
+    - Goop (Slows down)
+    - Spikes
+  - Enemies
+    - Foot Soldier
+      - Speed: medium
+      - Health: low
+      - Kinetic: regular
+      - Energy: low
+      - Poison: regular
+      - Flame: regular
+    - Electro Soldier
+      - Speed: slow
+      - Health: medium
+      - Kinetic: low
+      - Energy:
