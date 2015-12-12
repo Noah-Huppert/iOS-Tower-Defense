@@ -64,7 +64,7 @@ can have using Extended Backus–Naur Form like syntax.
       - projectile: cloud
         - speed: NA
         - tracking: NA
-      - extra: Damage lasts for 5 seconds
+      - extra: Damage lasts for 5 seconds, Weakened
     - Laser
       - nickname: Beam gun
       - type: energy
@@ -95,24 +95,96 @@ can have using Extended Backus–Naur Form like syntax.
         - speed: medium
         - tracking: true
       - extra: AOE after hit
-- Units
-  - Passive Towers
-    - Radar (Weakens targeted enemy)
-    - Vacuum (More money in area)
-  - Obstacles
-    - Land Mine
-    - Goop (Slows down)
+    - Radar
+      - nickname:
+      - type: energy
+      - damage: none
+      - rate: continuous
+      - aim-speed: fast
+      - projectile: beam
+        - speed: NA
+        - tracking: NA
+      - extra: Weakened
+- Passive Towers
+  - SCHEMA
+    - nickname: (* | ?)
+    - range: (close | medium | far)
+    - effect: *
+  - CONTENT
+    - Vacuum
+      - nickname:
+      - range: close
+      - effect: More money on kill
+- Obstacles
+  - SCHEMA
+    - nickname: (* | ?)
+    - damage: (none | low | medium | high)
+    - action: (explode | slow)
+    - lifetime: (once | health)
+  - CONTENT
+    - Land mine
+      - nickname:
+      - damage: high
+      - action: explode
+      - lifetime: once
+    - Goop
+      - nickname: Gum
+      - damage: none
+      - action: slow
+      - lifetime: health
     - Spikes
-  - Enemies
-    - Foot Soldier
-      - Speed: medium
-      - Health: low
-      - Kinetic: regular
-      - Energy: low
-      - Poison: regular
-      - Flame: regular
-    - Electro Soldier
-      - Speed: slow
-      - Health: medium
-      - Kinetic: low
-      - Energy:
+      - nickname:
+      - damage: medium
+      - action:
+      - lifetime: health
+- Enemies
+  - SCHEMA
+    - nickname: (* | ?)
+    - speed: (slow | medium | fast)
+    - health: (low | medium | high)
+    - resists: Turrets.SCHEMA.type
+    - weakness: Turrets.SCHEMA.type
+    - on-die: (die | spawn->enemy)
+  - CONTENT
+    - Foot soldier
+      - nickname:
+      - speed: medium
+      - health: low
+      - resists: energy
+      - weakness:
+      - on-die: die
+    - Energy soldier
+      - nickname: Electro Soldier
+      - speed: medium
+      - health: medium
+      - resists: energy+
+      - weakness: fire
+      - on-die: die
+    - Fire soldier
+      - nickname:
+      - speed: medium
+      - health: medium
+      - resists: fire
+      - weakness: energy
+      - on-die: die
+    - Poison soldier
+      - nickname: Goul
+      - speed: slow
+      - health: medium
+      - resists: poison
+      - weakness: fire
+      - on-die
+    - Multiply Soldier
+      - nickname:
+      - speed: medium
+      - health: low
+      - resists: poison
+      - weakness: fire
+      - on-die: spawn->Little Soldier
+    - Little Soldier
+      - nickname: Cannon fodder | Sparmling
+      - speed: fast
+      - health: low
+      - resists: energy
+      - weakness: fire
+      - on-die: die
