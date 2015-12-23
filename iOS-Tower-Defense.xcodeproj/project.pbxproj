@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8FB16F271C23939600685A20 /* Vector2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB16F261C23939600685A20 /* Vector2.swift */; };
+		8FB16F291C23942400685A20 /* GridSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB16F281C23942400685A20 /* GridSquare.swift */; };
+		8FB16F2B1C23945E00685A20 /* GridSquareType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB16F2A1C23945E00685A20 /* GridSquareType.swift */; };
+		8FB16F2D1C2394A200685A20 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB16F2C1C2394A200685A20 /* Entity.swift */; };
 		8FB921A51C1CA14E005772F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB921A41C1CA14E005772F1 /* AppDelegate.swift */; };
 		8FB921A71C1CA14E005772F1 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8FB921A61C1CA14E005772F1 /* GameScene.sks */; };
 		8FB921A91C1CA14E005772F1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB921A81C1CA14E005772F1 /* GameScene.swift */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8FB16F261C23939600685A20 /* Vector2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector2.swift; sourceTree = "<group>"; };
+		8FB16F281C23942400685A20 /* GridSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridSquare.swift; sourceTree = "<group>"; };
+		8FB16F2A1C23945E00685A20 /* GridSquareType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridSquareType.swift; sourceTree = "<group>"; };
+		8FB16F2C1C2394A200685A20 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		8FB921A11C1CA14E005772F1 /* iOS-Tower-Defense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Tower-Defense.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FB921A41C1CA14E005772F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FB921A61C1CA14E005772F1 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -39,6 +47,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FB16F231C23931F00685A20 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8FB921AA1C1CA14E005772F1 /* GameViewController.swift */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		8FB16F241C23932A00685A20 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				8FB921A61C1CA14E005772F1 /* GameScene.sks */,
+				8FB921A81C1CA14E005772F1 /* GameScene.swift */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		8FB16F251C23933B00685A20 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				8FB16F261C23939600685A20 /* Vector2.swift */,
+				8FB16F281C23942400685A20 /* GridSquare.swift */,
+				8FB16F2A1C23945E00685A20 /* GridSquareType.swift */,
+				8FB16F2C1C2394A200685A20 /* Entity.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
 		8FB921981C1CA14E005772F1 = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +94,10 @@
 		8FB921A31C1CA14E005772F1 /* iOS-Tower-Defense */ = {
 			isa = PBXGroup;
 			children = (
+				8FB16F251C23933B00685A20 /* models */,
 				8FB921A41C1CA14E005772F1 /* AppDelegate.swift */,
-				8FB921A61C1CA14E005772F1 /* GameScene.sks */,
-				8FB921A81C1CA14E005772F1 /* GameScene.swift */,
-				8FB921AA1C1CA14E005772F1 /* GameViewController.swift */,
+				8FB16F241C23932A00685A20 /* views */,
+				8FB16F231C23931F00685A20 /* controllers */,
 				8FB921AC1C1CA14E005772F1 /* Main.storyboard */,
 				8FB921AF1C1CA14E005772F1 /* Assets.xcassets */,
 				8FB921B11C1CA14E005772F1 /* LaunchScreen.storyboard */,
@@ -143,8 +179,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FB921A91C1CA14E005772F1 /* GameScene.swift in Sources */,
+				8FB16F271C23939600685A20 /* Vector2.swift in Sources */,
+				8FB16F2D1C2394A200685A20 /* Entity.swift in Sources */,
 				8FB921AB1C1CA14E005772F1 /* GameViewController.swift in Sources */,
 				8FB921A51C1CA14E005772F1 /* AppDelegate.swift in Sources */,
+				8FB16F2B1C23945E00685A20 /* GridSquareType.swift in Sources */,
+				8FB16F291C23942400685A20 /* GridSquare.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

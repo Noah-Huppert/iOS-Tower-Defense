@@ -182,9 +182,13 @@ can have using Extended Backus–Naur Form like syntax.
       - weakness: fire
       - on-die: spawn->Little Soldier
     - Little Soldier
-      - nickname: Cannon fodder | Sparmling
+      - nickname: Cannon fodder | Swarmling
       - speed: fast
       - health: low
       - resists: energy
       - weakness: fire
       - on-die: die
+## Programming Systems
+- class World
+- class Grid
+- class GridSquare
